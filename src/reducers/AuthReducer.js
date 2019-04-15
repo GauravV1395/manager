@@ -15,7 +15,6 @@ const INITIAL_STATE = {
 }; // used to set the initial state of state to "" because a reducer can never return undefined.
 
 export default (state = INITIAL_STATE, action) => {
-  console.log(action);
   switch (action.type) {
     case EMAIL_CHANGED:
       return { ...state, email: action.payload }; // this line says create a new object and throw the entire state inside and also add the email key or if email exists update the value of it.
